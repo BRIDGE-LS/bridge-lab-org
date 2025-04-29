@@ -1,0 +1,19 @@
+- name: Prof. Dr. Ana Silva
+  role: Director | AI Specialist
+  image: /assets/images/team/ana-silva.jpg
+  placeholder: true
+  
+- name: Prof. Dr. Carlos Mendes
+  role: Senior Researcher | Formal Methods
+  image: /assets/images/team/carlos-mendes.jpg
+  placeholder: true
+  
+- name: Dr. Mariana Costa
+  role: Researcher | Generative Engineering
+  image: /assets/images/team/mariana-costa.jpg
+  placeholder: true
+  
+- name: Dr. Felipe Santos
+  role: Researcher | Industry-Academia Collaboration
+  image: /assets/images/team/felipe-santos.jpg
+  placeholder: true

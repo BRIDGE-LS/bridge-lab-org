@@ -1,0 +1,50 @@
+# Site settings
+title: BRIDGE
+description: Bridging Research, Innovation, and Development for Generative Engineering
+baseurl: "/bridge-lab-org" # the subpath of your site, e.g. /blog
+url: "https://bridge-lab-org.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .gitignore
+
+# Collections
+collections:
+  research:
+    output: true
+  publications:
+    output: true
+  team:
+    output: true
+
+# Default front matter
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "research"
+    values:
+      layout: "page"
+  - scope:
+      path: ""
+      type: "publications"
+    values:
+      layout: "page"
+  - scope:
+      path: ""
+      type: "team"
+    values:
+      layout: "page"

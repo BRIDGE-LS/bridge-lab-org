@@ -1,0 +1,54 @@
+<!-- Footer -->
+<footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-about">
+          <div class="footer-logo">
+            <div class="logo-symbol">
+              <svg viewBox="0 0 320 150" xmlns="http://www.w3.org/2000/svg">
+                <path d="M30,84 C90,64 130,35 160,30 C190,35 230,64 290,84" 
+                      fill="none" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round" />
+                <circle cx="160" cy="30" r="15" fill="#3E92CC" />
+                <circle cx="160" cy="30" r="8" fill="#ffffff" />
+              </svg>
+            </div>
+            <div class="logo-text">BRIDGE</div>
+          </div>
+          <p>{{ site.description }}</p>
+          <div class="social-links">
+            {% if site.data.social.twitter %}
+              <a href="{{ site.data.social.twitter }}"><i>T</i></a>
+            {% endif %}
+            {% if site.data.social.linkedin %}
+              <a href="{{ site.data.social.linkedin }}"><i>L</i></a>
+            {% endif %}
+            {% if site.data.social.github %}
+              <a href="{{ site.data.social.github }}"><i>G</i></a>
+            {% endif %}
+            {% if site.data.social.youtube %}
+              <a href="{{ site.data.social.youtube }}"><i>Y</i></a>
+            {% endif %}
+          </div>
+        </div>
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            {% for item in site.data.navigation %}
+              <li><a href="{{ item.link | relative_url }}">{{ item.name }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="footer-newsletter">
+          <h3>Newsletter</h3>
+          <p>Stay updated with our latest research and events.</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Your email address">
+            <button type="submit">→</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>

@@ -1,0 +1,35 @@
+- title: Generative Frameworks for Software Engineering Automation - A Comparative Study
+  authors: Silva, A., Mendes, C., Costa, M.
+  venue: Journal of Software Engineering Research and Development, 2024
+  abstract: This study presents a comparative analysis of generative frameworks for automating software engineering tasks, evaluating their effectiveness in various contexts.
+  links:
+    - name: PDF
+      url: "#"
+    - name: DOI
+      url: "#"
+    - name: BibTeX
+      url: "#"
+      
+- title: AI in Architecture Generation - Balancing Quality and Efficiency
+  authors: Costa, M., Santos, F., Pereira, J.
+  venue: International Conference on Automated Software Engineering (ASE), 2023
+  abstract: Proposal of a new algorithm for generating software architectures that balances result quality and computational efficiency, with validation in real projects.
+  links:
+    - name: PDF
+      url: "#"
+    - name: DOI
+      url: "#"
+    - name: BibTeX
+      url: "#"
+      
+- title: Transfer Models for Software Requirements - Challenges from Academia to Industry
+  authors: Mendes, C., Oliveira, T., Silva, A.
+  venue: Requirements Engineering Journal, 2023
+  abstract: Investigation of challenges in transferring AI models trained in academia to industrial applications in software requirements engineering.
+  links:
+    - name: PDF
+      url: "#"
+    - name: DOI
+      url: "#"
+    - name: BibTeX
+      url: "#"
