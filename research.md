@@ -5,37 +5,42 @@ title: Research
 
 <section class="page-header">
   <div class="container">
-    <h1>Researching<br>at the frontier</h1>
-    <p>At BRIDGE, we develop innovative methodologies and tools for software engineering, and our research teams help to create more reliable, efficient, and maintainable software systems.</p>
+    <h1>Research Areas</h1>
+    <p>Our main research focuses and ongoing projects.</p>
   </div>
 </section>
 
-<section class="research-navigation">
+<section class="research-section">
   <div class="container">
-    <ul class="tab-navigation">
-      <li><a href="#overview" class="active">Overview</a></li>
-      <li><a href="#ai-assisted">AI-Assisted SE</a></li>
-      <li><a href="#generative">Generative Architectures</a></li>
-      <li><a href="#formal">Formal Methods</a></li>
-    </ul>
-  </div>
-</section>
-
-<section id="overview" class="research-section">
-  <div class="container">
-    <h2 class="section-title">Our Mission</h2>
-    
-    <div class="mission-content">
-      <p class="large-text">
-        Our research teams investigate new methodologies and tools to improve software development using artificial intelligence and machine learning techniques.
-      </p>
+    <div class="research-grid">
+      <div class="research-item">
+        <div class="research-content">
+          <h3>AI-Assisted Software Engineering</h3>
+          <p>We investigate how AI algorithms can assist in code generation, bug detection, automatic refactoring, and software system optimization.</p>
+          <a href="{{ site.baseurl }}/research/ai-assisted-software-engineering" class="learn-more">Learn more →</a>
+        </div>
+      </div>
       
-      <p>We work on developing systems that can assist in code generation, detect bugs automatically, verify software correctness, and optimize software architectures. Our goal is to create tools that augment developers' capabilities, improve code quality, and increase productivity.</p>
+      <div class="research-item">
+        <div class="research-content">
+          <h3>Generative Architectures</h3>
+          <p>We develop systems that can automatically generate software architectures adaptable to specific requirements, optimizing for performance, security, and scalability.</p>
+          <a href="{{ site.baseurl }}/research/generative-architectures" class="learn-more">Learn more →</a>
+        </div>
+      </div>
+
+      <div class="research-item">
+        <div class="research-content">
+          <h3>Automated Formal Methods</h3>
+          <p>We work on tools that apply formal verification automatically during the development process, ensuring more reliable software.</p>
+          <a href="{{ site.baseurl }}/research/automated-formal-methods" class="learn-more">Learn more →</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<section id="ai-assisted" class="research-section">
+<section class="research-details" id="ai-assisted">
   <div class="container">
     <h2 class="section-title">AI-Assisted Software Engineering</h2>
     
@@ -44,7 +49,7 @@ title: Research
         Our research in AI-Assisted Software Engineering explores how artificial intelligence techniques can enhance and automate various aspects of the software development lifecycle.
       </p>
       
-      <div class="research-details">
+      <div class="research-details-grid">
         <div class="research-focus">
           <h3>Research Focus</h3>
           <ul>
@@ -64,13 +69,11 @@ title: Research
           </ul>
         </div>
       </div>
-      
-      <a href="{{ site.baseurl }}/research/ai-assisted-software-engineering" class="button outline">Learn more</a>
     </div>
   </div>
 </section>
 
-<section id="generative" class="research-section">
+<section class="research-details" id="generative">
   <div class="container">
     <h2 class="section-title">Generative Architectures</h2>
     
@@ -79,7 +82,7 @@ title: Research
         The Generative Architectures research area focuses on developing innovative systems that can automatically design and generate software architectures tailored to specific requirements.
       </p>
       
-      <div class="research-details">
+      <div class="research-details-grid">
         <div class="research-focus">
           <h3>Research Focus</h3>
           <ul>
@@ -99,13 +102,11 @@ title: Research
           </ul>
         </div>
       </div>
-      
-      <a href="{{ site.baseurl }}/research/generative-architectures" class="button outline">Learn more</a>
     </div>
   </div>
 </section>
 
-<section id="formal" class="research-section">
+<section class="research-details" id="formal">
   <div class="container">
     <h2 class="section-title">Automated Formal Methods</h2>
     
@@ -114,7 +115,7 @@ title: Research
         This research area is dedicated to making formal verification techniques more accessible and practical for everyday software development.
       </p>
       
-      <div class="research-details">
+      <div class="research-details-grid">
         <div class="research-focus">
           <h3>Research Focus</h3>
           <ul>
@@ -134,8 +135,6 @@ title: Research
           </ul>
         </div>
       </div>
-      
-      <a href="{{ site.baseurl }}/research/automated-formal-methods" class="button outline">Learn more</a>
     </div>
   </div>
 </section>
