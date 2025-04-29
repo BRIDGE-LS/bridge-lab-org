@@ -1,111 +1,101 @@
 # BRIDGE Lab Website
 
-This repository contains the source code for the BRIDGE Lab website, which is built using Jekyll and hosted on GitHub Pages.
+Este repositório contém o código-fonte do site do laboratório BRIDGE, construído usando Jekyll e hospedado no GitHub Pages.
 
-## Overview
+## Configuração do Repositório
 
-BRIDGE (Bridging Research, Innovation, and Development for Generative Engineering) is a research lab focused on the intersection of academia and industry in software engineering, with a particular emphasis on artificial intelligence and generative techniques.
+1. **Crie um novo repositório no GitHub**
+   - Nome: `bridge-lab-org`
+   - Visibilidade: Público
+   - Não inicialize com README
 
-## Setup
-
-### Prerequisites
-
-- Ruby version 2.5.0 or higher
-- RubyGems
-- GCC and Make
-
-### Installation
-
-1. Install Jekyll and Bundler:
+2. **Clone o repositório localmente**
+   ```bash
+   git clone https://github.com/bridge-ls/bridge-lab-org.git
+   cd bridge-lab-org
    ```
+
+3. **Copie todos os arquivos deste template para o repositório**
+
+4. **Inicialize, adicione e faça commit dos arquivos**
+   ```bash
+   git init
+   git add .
+   git commit -m "Initial commit with Jekyll template"
+   ```
+
+5. **Envie para o GitHub**
+   ```bash
+   git push -u origin main
+   ```
+
+6. **Ative o GitHub Pages**
+   - Vá para o seu repositório no GitHub
+   - Navegue para "Settings" > "Pages"
+   - Em "Source", selecione `main` como branch
+   - Clique em "Save"
+
+## Estrutura do Site
+
+- `_config.yml`: Arquivo de configuração do Jekyll
+- `_layouts/`: Templates de layout
+- `_includes/`: Componentes reutilizáveis (cabeçalho, rodapé, etc.)
+- `_sass/`: Arquivos SCSS para estilização
+- `assets/`: Arquivos estáticos (CSS, JS, imagens)
+- `_data/`: Arquivos de dados para equipe, publicações, etc.
+- `index.md`: Página inicial
+- `research.md`: Página de pesquisa
+- `team.md`: Página da equipe
+- `publications.md`: Página de publicações
+- `contact.md`: Página de contato
+
+## Personalização
+
+### Modificando o conteúdo
+
+- **Equipe**: Edite o arquivo `_data/team.yml` para adicionar ou modificar membros da equipe
+- **Publicações**: Edite o arquivo `_data/publications.yml` para atualizar as publicações
+- **Navegação**: Edite o arquivo `_data/navigation.yml` para modificar o menu de navegação
+
+### Modificando o estilo
+
+- Os estilos principais estão em `_sass/main.scss`
+- As cores e variáveis podem ser modificadas no início deste arquivo
+
+### Adicionando imagens
+
+- Adicione imagens na pasta `assets/images/`
+- Substitua as imagens de placeholder por imagens reais da equipe
+- Atualize as referências nos arquivos YAML e Markdown
+
+## Testando localmente
+
+1. **Instale o Jekyll e as dependências**
+   ```bash
    gem install jekyll bundler
-   ```
-
-2. Clone this repository:
-   ```
-   git clone https://github.com/your-organization/bridge-lab.git
-   cd bridge-lab
-   ```
-
-3. Install dependencies:
-   ```
    bundle install
    ```
 
-4. Start the local server:
-   ```
+2. **Execute o servidor local**
+   ```bash
    bundle exec jekyll serve
    ```
 
-5. Browse to http://localhost:4000
+3. **Acesse o site**
+   - Abra `http://localhost:4000/bridge-lab-org/` no navegador
 
-## Site Structure
+## Importante
 
-- `_config.yml`: Configuration file
-- `_layouts/`: Layout templates
-- `_includes/`: Reusable components
-- `_sass/`: Sass partials for styling
-- `assets/`: Static files (CSS, JS, images)
-- `_data/`: Data files for navigation, team members, etc.
-- `_research/`: Collection of research areas
-- `index.md`: Homepage
+- Certifique-se de que o valor de `baseurl` no arquivo `_config.yml` está definido como `/bridge-lab-org`
+- Adicione o arquivo `.nojekyll` na raiz do repositório para garantir que o GitHub Pages não ignore arquivos que começam com underscore
 
-## Adding Content
+## Desenvolvimento Futuro
 
-### Adding Research Projects
+- Adicione páginas específicas para cada área de pesquisa
+- Implemente um blog para notícias e atualizações
+- Adicione funcionalidade ao formulário de contato
+- Integre Google Analytics para rastrear visitantes
 
-Create a new markdown file in the `_research/` directory with the following front matter:
+## Licença
 
-```yaml
----
-layout: page
-title: Your Research Title
-excerpt: A brief description of the research area
-order: [position number]
----
-```
-
-### Adding Team Members
-
-Edit the `_data/team.yml` file to add new team members:
-
-```yaml
-- name: Name of Team Member
-  role: Role/Position
-  image: /assets/images/team/member-image.jpg
-  # Or use placeholder: true for a placeholder image
-```
-
-### Adding Publications
-
-Edit the `_data/publications.yml` file to add new publications:
-
-```yaml
-- title: Publication Title
-  authors: Author1, A., Author2, B.
-  venue: Journal or Conference, Year
-  abstract: Brief abstract of the publication
-  links:
-    - name: PDF
-      url: link-to-pdf
-    - name: DOI
-      url: link-to-doi
-```
-
-## Customization
-
-### Changing Colors and Styles
-
-The main styles are located in `_sass/main.scss`. Update the color variables at the top of the file to change the color scheme.
-
-### Updating Navigation
-
-Edit the `_data/navigation.yml` file to update the navigation menu items.
-
-## Deployment
-
-The site is automatically deployed to GitHub Pages when changes are pushed to the main branch. No additional steps are required for deployment.
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
+Este projeto está licenciado sob a licença MIT - veja o arquivo LICENSE para detalhes.

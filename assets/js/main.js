@@ -1,95 +1,67 @@
-// Add smooth scrolling for navigation links
-document.addEventListener('DOMContentLoaded', function() {
-    const navLinks = document.querySelectorAll('nav a[href^="#"]');
-    
-    for (const link of navLinks) {
-      link.addEventListener('click', function(e) {
+document.addEventListener('DOMContentLoaded', function () {
+  // Smooth scrolling for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      const targetId = this.getAttribute('href');
+      if (targetId === '#') return;
+
+      const targetElement = document.querySelector(targetId);
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop - 80, // Account for fixed header
+          behavior: 'smooth'
+        });
+
+        // Update URL hash without scrolling
+        history.pushState(null, null, targetId);
+      }
+    });
+  });
+
+  // Tab navigation in research page
+  const tabLinks = document.querySelectorAll('.tab-navigation a');
+  if (tabLinks.length > 0) {
+    tabLinks.forEach(link => {
+      link.addEventListener('click', function (e) {
         e.preventDefault();
-        
+
+        // Remove active class from all tabs
+        tabLinks.forEach(tab => tab.classList.remove('active'));
+
+        // Add active class to clicked tab
+        this.classList.add('active');
+
+        // Scroll to the section
         const targetId = this.getAttribute('href');
         const targetElement = document.querySelector(targetId);
-        
+
         if (targetElement) {
           window.scrollTo({
-            top: targetElement.offsetTop - 100,
+            top: targetElement.offsetTop - 120, // Account for header and tabs
             behavior: 'smooth'
           });
         }
       });
+    });
+  }
+
+  // Header scroll behavior
+  const header = document.querySelector('.site-header');
+  let lastScrollPosition = 0;
+
+  function handleScroll() {
+    const currentScrollPosition = window.pageYOffset;
+
+    if (currentScrollPosition > 100) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
     }
-    
-    // Form validation for contact form
-    const contactForm = document.querySelector('.contact-form form');
-    
-    if (contactForm) {
-      contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        const nameInput = document.getElementById('name');
-        const emailInput = document.getElementById('email');
-        const messageInput = document.getElementById('message');
-        
-        let isValid = true;
-        
-        if (!nameInput.value.trim()) {
-          isValid = false;
-          highlightError(nameInput);
-        } else {
-          removeHighlight(nameInput);
-        }
-        
-        if (!emailInput.value.trim() || !isValidEmail(emailInput.value)) {
-          isValid = false;
-          highlightError(emailInput);
-        } else {
-          removeHighlight(emailInput);
-        }
-        
-        if (!messageInput.value.trim()) {
-          isValid = false;
-          highlightError(messageInput);
-        } else {
-          removeHighlight(messageInput);
-        }
-        
-        if (isValid) {
-          // In a real implementation, you would send the form data to a server
-          alert('Thank you for your message! We will get back to you soon.');
-          contactForm.reset();
-        }
-      });
-    }
-    
-    // Newsletter form
-    const newsletterForm = document.querySelector('.newsletter-form');
-    
-    if (newsletterForm) {
-      newsletterForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        const emailInput = newsletterForm.querySelector('input[type="email"]');
-        
-        if (!emailInput.value.trim() || !isValidEmail(emailInput.value)) {
-          highlightError(emailInput);
-        } else {
-          removeHighlight(emailInput);
-          // In a real implementation, you would send the email to a server
-          alert('Thank you for subscribing to our newsletter!');
-          emailInput.value = '';
-        }
-      });
-    }
-    
-    function highlightError(input) {
-      input.style.borderColor = '#e74c3c';
-    }
-    
-    function removeHighlight(input) {
-      input.style.borderColor = '#ddd';
-    }
-    
-    function isValidEmail(email) {
-      const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      return re.test(email);
-    }
-  });
+
+    lastScrollPosition = currentScrollPosition;
+  }
+
+  window.addEventListener('scroll', handleScroll);
+});

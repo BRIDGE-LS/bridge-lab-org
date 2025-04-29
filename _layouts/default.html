@@ -1,15 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-{% include head.html %}
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }} - {{ site.description }}{%
+    endif %}</title>
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/styles.css">
+  {% seo %}
+</head>
 
 <body>
-    {% include header.html %}
+  <header class="site-header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <a href="{{ site.baseurl }}/">
+            <img src="{{ site.baseurl }}/assets/images/bridge-logo.svg" alt="{{ site.title }}" class="logo-image">
+          </a>
+        </div>
+        <nav class="main-nav">
+          <ul>
+            {% for item in site.data.navigation %}
+            <li><a href="{{ site.baseurl }}{{ item.link }}" {% if page.url==item.link %}class="active" {% endif %}>{{
+                item.name }}</a></li>
+            {% endfor %}
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
 
+  <main>
     {{ content }}
+  </main>
 
-    {% include footer.html %}
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="{{ site.baseurl }}/assets/images/bridge-logo.svg" alt="{{ site.title }}" class="logo-image">
+        </div>
+        <div class="footer-links">
+          <ul>
+            {% for item in site.data.navigation %}
+            <li><a href="{{ site.baseurl }}{{ item.link }}">{{ item.name }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <p>University of Pernambuco, Center for Informatics</p>
+          <p>contact@bridge-lab.org</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; {{ 'now' | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
 
-    <script src="{{ site.baseurl }}/assets/js/main.js"></script>
+  <script src="{{ site.baseurl }}/assets/js/main.js"></script>
 </body>
 
 </html>

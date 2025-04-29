@@ -1,19 +1,19 @@
-- name: Prof. Dr. Ana Silva
-  role: Director | AI Specialist
-  image: /assets/images/team/ana-silva.jpg
-  placeholder: true
+- name: Prof. Me. Helaine Barreiros
+  role: Director | AI Software Engineering Specialist
+  image: /assets/images/team/helaine-barreiros.svg
+
+- name: Prof. Dr. Ivaldr Honório
+  role: Researcher | Innovation
+  image: /assets/images/team/ivaldir-honorio.svg
   
-- name: Prof. Dr. Carlos Mendes
-  role: Senior Researcher | Formal Methods
-  image: /assets/images/team/carlos-mendes.jpg
-  placeholder: true
+- name: Prof. Dr. Cleyton Rodrigues
+  role: Researcher | Artificial Intelligence
+  image: /assets/images/team/cleyton-rodrigues.svg
+
+- name: Prof. Dr. Emanoel Barreiros
+  role: Senior Researcher | Technology Transfer
+  image: /assets/images/team/emanoel-barreiros.svg
   
-- name: Dr. Mariana Costa
-  role: Researcher | Generative Engineering
-  image: /assets/images/team/mariana-costa.jpg
-  placeholder: true
-  
-- name: Dr. Felipe Santos
-  role: Researcher | Industry-Academia Collaboration
-  image: /assets/images/team/felipe-santos.jpg
-  placeholder: true
+- name: Gabriel Ferreira
+  role: Researcher | AI Software Engineering Specialist
+  image: /assets/images/team/gabriel-ferreira.svg
