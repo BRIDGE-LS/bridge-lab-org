@@ -6,7 +6,7 @@ layout: default
   <div class="container">
     <div class="hero-content">
       <h1>Connecting Research<br>and Industry in<br>Generative Engineering</h1>
-      <p>At BRIDGE, we conduct innovative research at the intersection of academia and industry, developing AI techniques to advance the practical application of software engineering.</p>
+      <p>At BRIDGE, we conduct innovative research at the intersection of academia and industry, developing AI techniques to advance the practical application of software engineering. </p>
       
       <a href="{{ site.baseurl }}/research" class="button primary">Explore our research</a>
     </div>
