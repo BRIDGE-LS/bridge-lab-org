@@ -2,7 +2,7 @@
 title: BRIDGE
 description: Bridging Research, Innovation, and Development for Generative Engineering
 baseurl: "" # the subpath of your site for GitHub Project Pages
-url: "https://bridge-ls.github.io/" # the base hostname & protocol for your site
+url: "https://bridge-ls.github.io" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
