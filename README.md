@@ -32,8 +32,8 @@ Este repositório contém o código-fonte do site do laboratório BRIDGE, constr
 6. **Ative o GitHub Pages**
    - Vá para o seu repositório no GitHub
    - Navegue para "Settings" > "Pages"
-   - Em "Source", selecione `main` como branch
-   - Clique em "Save"
+   - Em "Source", selecione `main` como branch  
+   - Clique em "Save".
 
 ## Estrutura do Site
 
