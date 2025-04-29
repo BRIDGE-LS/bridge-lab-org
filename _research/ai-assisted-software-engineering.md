@@ -61,4 +61,4 @@ We partner with software companies to validate our research in real-world settin
 
 ## Join Our Research
 
-If you're interested in collaborating on AI-assisted software engineering research, please [contact us](/contact) to discuss potential opportunities.
+If you're interested in collaborating on AI-assisted software engineering research, please [contact us]({{ site.baseurl }}/contact) to discuss potential opportunities.

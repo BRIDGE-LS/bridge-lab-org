@@ -12,7 +12,7 @@ layout: default
         <a href="#about" class="btn">Learn about our work</a>
       </div>
       <div class="hero-image">
-        <img src="/api/placeholder/500/300" alt="Collaborative research illustration" />
+        <img src="{{ site.baseurl }}/api/placeholder/500/300" alt="Collaborative research illustration" />      
       </div>
     </div>
   </div>
@@ -74,9 +74,9 @@ layout: default
       {% for member in site.data.team %}
         <div class="team-member">
           {% if member.placeholder %}
-            <img src="/api/placeholder/200/200" alt="{{ member.name }}" />
+            <img src="{{ site.baseurl }}/api/placeholder/200/200" alt="{{ member.name }}" />
           {% else %}
-            <img src="{{ member.image | relative_url }}" alt="{{ member.name }}" />
+            <img src="{{ site.baseurl }}{{ member.image }}" alt="{{ member.name }}" />
           {% endif %}
           <h3>{{ member.name }}</h3>
           <p>{{ member.role }}</p>
