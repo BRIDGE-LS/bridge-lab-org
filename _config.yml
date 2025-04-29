@@ -1,7 +1,7 @@
 # Site settings
 title: BRIDGE
 description: Bridging Research, Innovation, and Development for Generative Engineering
-baseurl: "/bridge-lab-org" # the subpath of your site for GitHub Project Pages
+baseurl: "" # the subpath of your site for GitHub Project Pages
 url: "https://bridge-ls.github.io" # the base hostname & protocol for your site
 
 # Build settings
