@@ -32,7 +32,7 @@ layout: default
         <div class="research-content">
           <h3>AI-Assisted Software Engineering</h3>
           <p>We investigate how AI algorithms can assist in code generation, bug detection, automatic refactoring, and software system optimization.</p>
-          <a href="{{ site.baseurl }}/research/ai-assisted-software-engineering" class="learn-more">Learn more →</a>
+          <a href="{{ site.baseurl }}/research/ai-assisted-software-engineering" class="learn-more">Learn more</a>
         </div>
       </div>
       
@@ -40,7 +40,7 @@ layout: default
         <div class="research-content">
           <h3>Generative Architectures</h3>
           <p>We develop systems that can automatically generate software architectures adaptable to specific requirements, optimizing for performance, security, and scalability.</p>
-          <a href="{{ site.baseurl }}/research/generative-architectures" class="learn-more">Learn more →</a>
+          <a href="{{ site.baseurl }}/research/generative-architectures" class="learn-more">Learn more</a>
         </div>
       </div>
       
@@ -48,9 +48,31 @@ layout: default
         <div class="research-content">
           <h3>Automated Formal Methods</h3>
           <p>We work on tools that apply formal verification automatically during the development process, ensuring more reliable software.</p>
-          <a href="{{ site.baseurl }}/research/automated-formal-methods" class="learn-more">Learn more →</a>
+          <a href="{{ site.baseurl }}/research/automated-formal-methods" class="learn-more">Learn more</a>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="research-areas">
+  <div class="container">
+    <h2 class="section-title">Research Projects</h2>
+    
+    <div class="area-cards">
+
+      {% for project in site.projects %}
+        {% if project.name == 'index' or project.path contains '/index.md' %}
+          <div class="research-item">
+            <div class="research-content">
+              <h3>{{project.title}}</h3>
+              <p>{{ project.subtitle }}</p>
+              <a href="{{ site.baseurl }}{{ project.url }}" class="learn-more">Learn more</a>
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+
     </div>
   </div>
 </section>
